@@ -1,3 +1,4 @@
+import { title } from "process";
 import { Rule } from "sanity";
 
 export const post = {
@@ -42,6 +43,12 @@ export const post = {
           fields: [{ type: "text", name: "alt", title: "Alt" }],
         },
       ],
+    },
+    {
+      name: "tags",
+      title: "Tags",
+      type: "array",
+      of: [{ type: "reference", to: [{ type: "tag" }] }],
     },
   ],
 };
