@@ -15,7 +15,7 @@ export const ThemeToggle = () => {
   if (!mounted) return null;
 
   return (
-    <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+    <button className="border border-purple-500 rounded-2xl p-1" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
       {theme === "dark" ? <SunIcon/> : <MoonIcon/>}
     </button>
   );
