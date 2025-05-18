@@ -11,7 +11,8 @@
   "dependencies": {
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.88.3",
-    "next": "14.0.3",
+    "next": "14.2",
+    "next-sanity": "^9.11.1",
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
