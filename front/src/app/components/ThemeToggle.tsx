@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { MoonIcon, SunIcon } from "./Icons";
 
 export const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
@@ -15,7 +16,7 @@ export const ThemeToggle = () => {
 
   return (
     <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-      {theme === "dark" ? "dark" : "light"}
+      {theme === "dark" ? <SunIcon/> : <MoonIcon/>}
     </button>
   );
 };
