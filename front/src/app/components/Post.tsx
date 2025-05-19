@@ -30,7 +30,7 @@ export const Post = ({ post }: Props) => {
             key={tag?._id}
             className="mr-2 p-1 rounded-md text-sm lowercase dark:bg-gray-950 border dark:border-gray-900 px-2"
           >
-            #{tag?.name}
+            <Link href={`/tag/${tag.name}`}>#{tag?.name}</Link>
           </span>
         ))}
       </div>
