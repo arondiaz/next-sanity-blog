@@ -4,7 +4,7 @@ import { Post } from "../components/Post";
 import { IPost } from "../utils/interface";
 
 async function getPosts() {
-  const query = `*[_type == "post"]{title, slug, publishedAt, excerpt, body, tags}`;
+  const query = `*[_type == "post"]{title, slug, publishedAt, excerpt, body, tags[]->{_id,slug,name}}`;
 
   const data = client.fetch(query);
   return data;
@@ -20,7 +20,7 @@ export default async function Home() {
 
       <div>
         {posts?.length > 0 &&
-          posts?.map((post) => <Post key={post?.id} post={post} />)}
+          posts?.map((post) => <Post key={post?._id} post={post} />)}
       </div>
     </div>
   );

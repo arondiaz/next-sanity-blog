@@ -5,11 +5,11 @@ export interface IPost {
   excerpt: string;
   body: any;
   tags: Array<ITag>;
-  id: string;
+  _id: string;
 }
 
 export interface ITag {
   name: string;
   slug: { current: string };
-  id: string;
+  _id: string;
 }
