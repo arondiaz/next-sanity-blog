@@ -7,6 +7,7 @@ import { VT323 } from "next/font/google";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
 import { urlForImage } from "../../../../../sanity/lib/image";
+import NotFound from "../NotFound";
 
 const dateFont = VT323({ weight: "400", subsets: ["latin"] });
 
@@ -25,6 +26,10 @@ export const revalidate = 60;
 
 const page = async ({ params }: Params) => {
   const post: IPost = await getPostPerId(params?.slug);
+
+  if (!post) {
+    return NotFound();
+  }
   return (
     <div>
       <Header title={post?.title} />

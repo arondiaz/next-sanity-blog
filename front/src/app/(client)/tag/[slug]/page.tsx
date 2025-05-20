@@ -13,6 +13,8 @@ async function getTagPerParams(tag: any) {
   return data;
 }
 
+export const revalidate = 60;
+
 const page = async ({ params }: Params) => {
   const tag: Array<IPost> = await getTagPerParams(params.slug);
   return (

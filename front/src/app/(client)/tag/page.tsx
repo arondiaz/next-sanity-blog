@@ -13,6 +13,8 @@ async function getTags() {
   return data;
 }
 
+export const revalidate = 60;
+
 const page = async () => {
   const tags: ITag[] = await getTags();
 
