@@ -12,4 +12,5 @@ export interface ITag {
   name: string;
   slug: { current: string };
   _id: string;
+  postCount?: number;
 }
